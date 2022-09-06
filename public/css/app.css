@@ -1,0 +1,181 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2D8259;
+}
+
+.container-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  background-color: #006A4D;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  line-height: 20px;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 20%;
+}
+
+.bankName {
+  color: ghostwhite;
+  padding: 10px;
+  margin-left: 10%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background-color: white;
+  padding: 8px 15px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #006A4D;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-group {
+  width: 100%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.line_content {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 10px;
+  align-items: center;
+  width: 80%;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.content_name {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.content_surname {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 150px;
+}
+
+.content_id {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+}
+
+.content_acc {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 200px;
+}
+
+.content_balance {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100px;
+}
+
+.line_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 5px 5px;
+}
+
+button {
+  font-family: "Times New Roman";
+  font-size: 16px;
+}

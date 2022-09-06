@@ -1,0 +1,17 @@
+{
+    "name": "rafal/13_p",
+    "description": "Fancy Bank",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafal K",
+            "email": "Rafaledmund@yahoo.com"
+        }
+    ],
+    "require": {}
+}
