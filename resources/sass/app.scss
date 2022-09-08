@@ -26,15 +26,17 @@ header{
     line-height: 20px;
 
 }
-.logout{
+.logout, .login{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 20%;
-
+    color: white;
+    text-transform: capitalize;
 }
+
 .bankName{
     color: ghostwhite;
     padding: 10px;   
@@ -166,5 +168,6 @@ button{
     font-family: 'Times New Roman';
     font-size: 16px;
 }
+
 
 

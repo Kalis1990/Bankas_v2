@@ -12,13 +12,20 @@
 <header>
     <div class="hero">
         <h1 class="bankName">Central Bank</h1>
-        <img class='logo' src="./bank.png" alt="logo">
+        <img class='logo' src="<?= URL ?>/bank.png" alt="logo">
     </div>
+    <?php if(App\Middlewares\Auth::isLoged()) : ?>
     <div class="logout">
+        <div class="name">Hi <?= $_SESSION['user']['name'] ?></div>
         <form action="<?= URL ?>logout" method="post">
-            <button type="submit" class="nav-btn">Logout</button>
+        <button type="submit" class="nav-btn">Logout</button>
         </form>
     </div>
+    <?php else : ?>     
+    <div class="login">
+        <a class="nav-btn" href="<?=URL?>login">Login</a>
+    </div>
+    <?php endif ?>
 </header>
 
 <body>

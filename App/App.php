@@ -66,7 +66,15 @@ class App {
         if ($method == 'POST' && count($url) == 1 && $url[0] == 'logout') {
             return((new L)->logout());
         }
-
+        else if($method == 'GET' && count($url)== 1 && $url[0] == 'users'){
+            if(!isLogged()){
+                redirect('login');
+            }
+            view('client');
+        }
+        else{
+        echo '404';
+        }
     }
 
     static public function view($name, $data = [])
@@ -78,6 +86,10 @@ class App {
     static public function redirect($where)
     {
         header('Location: ' . URL . $where);
+    }
+
+    function isLogged(){
+        return(isset($_SESSION['login']) && $_SESSION['login'] == 1);
     }
 
 }
