@@ -45,6 +45,12 @@ class App {
         if ($method == 'POST' && count($url) == 2 && $url[0] == 'users' && $url[1] == 'store') {
             return((new A)->store());
         }
+        if($method == 'POST' && count($url) == 3 && $url[0] == 'users' && $url[1] == 'addmoney'){
+            return((new A)->addmoney((int)$url[2]));
+        }
+        if ($method == 'POST' && count($url) == 3 && $url[0] == 'users' && $url[1] == 'deductmoney') {
+            return((new A)->deductmoney((int) $url[2]));
+        }
         if ($method == 'GET' && count($url) == 1 && $url[0] == 'users') {
             return((new A)->list());
         }
@@ -65,15 +71,6 @@ class App {
         }
         if ($method == 'POST' && count($url) == 1 && $url[0] == 'logout') {
             return((new L)->logout());
-        }
-        else if($method == 'GET' && count($url)== 1 && $url[0] == 'users'){
-            if(!isLogged()){
-                redirect('login');
-            }
-            view('client');
-        }
-        else{
-        echo '404';
         }
     }
 

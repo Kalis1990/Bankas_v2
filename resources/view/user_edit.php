@@ -23,14 +23,27 @@ App\App::view('top', ['title' => $title]);
             <div class="form-group">
                 <label>Account Number</label>
                 <input type="text" class="form-control" name="accnumber" value="<?=$user['accnumber']?>" readonly>
-                
+
             </div>
             <div class="form-group">
                 <label>Balance</label>
                 <input type="text" class="form-control" name="balance" value="<?=$user['balance']?>">
             </div>
-
             <button type="submit" class="btn">Submit</button>
+        </form>
+        <form action="<?= URL ?>users/deductmoney/<?= $user['id'] ?>" method="post">
+            <div class="money">
+                <label>Amount:</label>
+                <input type="number" class="form-control" name="balance" value="">
+            </div>
+            <button type="submit" class="btn">Deduct</button>
+        </form>
+        <form action="<?= URL ?>users/addmoney/<?= $user['id'] ?>" method="post">
+            <div class="money">
+                <label>Amount:</label>
+                <input type="number" class="form-control" name="balance" value="">
+            </div>
+            <button type="submit" class="btn">Add</button>
         </form>
     </div>
 </div>

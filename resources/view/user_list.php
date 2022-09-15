@@ -1,7 +1,11 @@
 <?php
 App\App::view('top', ['title' => $title]);
 ?>
-
+        <?php foreach($users as $user) : ?>
+            <?php if(isset($leftover) && $user['id'] == $leftover) : ?>
+            <div class="error"><?=$error['show'] ?? '' ?></div>
+            <?php endif ?>
+            <?php endforeach ?>
 <div class="container-v2">
     <div class="content">
         <h2>User List</h2>
@@ -11,6 +15,7 @@ App\App::view('top', ['title' => $title]);
             <?php foreach($users as $user) : ?>
             <div class="line">
                 <div class="line_content">
+
                     <div class="content_name">
                         <?= $user['name']?>
                     </div>
@@ -28,9 +33,9 @@ App\App::view('top', ['title' => $title]);
                     </div>
 
                 </div>
+
                 <div class="line_buttons">
-                    <a href="<?= URL.'users/edit/'.$user['id'] ?>" type="button"
-                        class="btn">Edit</a>
+                    <a href="<?= URL.'users/edit/'.$user['id'] ?>" type="button" class="btn">Edit</a>
                     <form action="<?= URL ?>users/delete/<?=$user['id']?>" method="post">
                         <button type="submit" class="btn">Delete</button>
                     </form>
@@ -40,7 +45,6 @@ App\App::view('top', ['title' => $title]);
         </div>
     </div>
 </div>
-
 
 <?php
 App\App::view('bottom');

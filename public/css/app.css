@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #2D8259;
+  position: relative;
 }
 
 .container-v2 {
@@ -51,6 +52,7 @@ header {
 }
 
 body {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -82,7 +84,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
 }
 
 .card-body {
@@ -180,4 +182,30 @@ body {
 button {
   font-family: "Times New Roman";
   font-size: 16px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: crimson;
+}
+
+footer {
+  background-color: #2D8259;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.Copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
