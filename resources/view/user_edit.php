@@ -7,6 +7,7 @@ App\App::view('top', ['title' => $title]);
         <h2>Edit User</h2>
     </div>
     <div class="card-body">
+        <div>
         <form action="<?= URL ?>users/update/<?=$user['id']?>" method="post">
             <div class="form-group">
                 <label>Name</label>
@@ -27,24 +28,30 @@ App\App::view('top', ['title' => $title]);
             </div>
             <div class="form-group">
                 <label>Balance</label>
-                <input type="text" class="form-control" name="balance" value="<?=$user['balance']?>">
+                <input type="text" class="form-control" name="balance" value="<?=$user['balance']?>" readonly>
             </div>
             <button type="submit" class="btn">Submit</button>
         </form>
-        <form action="<?= URL ?>users/deductmoney/<?= $user['id'] ?>" method="post">
-            <div class="money">
-                <label>Amount:</label>
-                <input type="number" class="form-control" name="balance" value="">
-            </div>
-            <button type="submit" class="btn">Deduct</button>
-        </form>
+        </div>
+        <div class="list">
         <form action="<?= URL ?>users/addmoney/<?= $user['id'] ?>" method="post">
-            <div class="money">
-                <label>Amount:</label>
+            <div class="form-group">
+                <label>Amount</label>
                 <input type="number" class="form-control" name="balance" value="">
             </div>
             <button type="submit" class="btn">Add</button>
         </form>
+        </div>
+        <div class="list">
+        <form action="<?= URL ?>users/deductmoney/<?= $user['id'] ?>" method="post">
+            <div class="form-group">
+                <label>Amount</label>
+                <input type="number" class="form-control" name="balance" value="">
+            </div>
+            <button type="submit" class="btn">Deduct</button>
+        </form>
+        </div>
+       
     </div>
 </div>
 

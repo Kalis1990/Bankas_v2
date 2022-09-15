@@ -3,7 +3,9 @@ App\App::view('top', ['title' => $title]);
 ?>
         <?php foreach($users as $user) : ?>
             <?php if(isset($leftover) && $user['id'] == $leftover) : ?>
-            <div class="error"><?=$error['show'] ?? '' ?></div>
+            <div class="error-location">
+                <div class="error-delete"><?=$error['show'] ?? '' ?></div>
+            </div>
             <?php endif ?>
             <?php endforeach ?>
 <div class="container-v2">
