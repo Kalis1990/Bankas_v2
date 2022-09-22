@@ -15,6 +15,9 @@ This project is for educational porpuses only. Pull request are welcome, but pri
 -   CSS animations
 -   CSS import
 -   PHP classes
+-   JS
 
+## Links 
+https://kalis1990.github.io/Bankas_v2/
 ## Authors
 Rafal: [Github](https://github.com/Kalis1990)<br>
